@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Train Scheduler</title>
+    <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+
+
+    <!---------------------Bootstrap----------------------->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-------------------CSS------------------->
+    <!-- <link rel="stylesheet" href="/assets/css/style.css" type="text/css"> -->
+
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div clas="jumbotron jumbotron-fluid">
+            <h1 class="display-1">Train Schedule</h1>
+            <p class="pull-right" id="currentTime"></p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">New York, New York</h3>
+                    </div>
+                    <div class="panel-body">
+
+                        <table class="table table-hover" id="train-table">
+                            <thead>
+                                <tr>
+                                    <th>Train Name</th>
+                                    <th>Destination</th>
+                                    <th class="text-center">Frequency</th>
+                                    <th class="text-center">Next Arrival</th>
+                                    <th class="text-center">Minutes Away</th>
+                                </tr>
+                            </thead>
+                            <tbody id="train-table-rows">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Add New Train: </h3>
+                    </div>
+                    <div class="panel-body">
+                        <form>
+                            <div class="form-group">
+                                <label>Train Name</label>
+                                <input type="text" class="form-control form-field" id="train-name">
+                            </div>
+                            <div class="form-group">
+                                <label>Destination</label>
+                                <input type="text" class="form-control form-field" id="destination">
+                            </div>
+                            <div class="form-group">
+                                <label>First Train Time: HH:mm - military time</label>
+                                <input type="text" class="form-control form-field" id="first-train">
+                            </div>
+                            <div class="form-group">
+                                <label>Frequency (min)</label>
+                                <input type="text" class="form-control form-field" id="frequency">
+                            </div>
+                            <button type="submit" class="btn btn-default" id="submitBtn">Add Train</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-----------Firebase------------->
+    <!-- <script src="/__/firebase/6.3.0/firebase-app.js"></script> -->
+    <!-- Initialize Firebase -->
+    <!-- <script src="/__/firebase/init.js"></script> -->
+    <!-------------------jQuery------------------>
+    <script src=" https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"> </script>
+    <!--------------------JS------------------->
+    <script src="assets/javascript/script.js" type="text/javascript"></script>
+</body>
+
+</html>
